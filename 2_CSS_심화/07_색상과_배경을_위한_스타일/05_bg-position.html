@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>배경이미지</title>
+  <style>
+    div {
+      margin-bottom: 20px;
+    }
+    button {
+      width: 140px;
+      height: 50px;
+      background-color: rgb(0,110,255);
+      border: 1px solid rgb(0,110,255);
+      border-radius: 8px;
+      color: #fff;
+      font-weight: bold;
+    }
+    #bg1 {
+      background-image: url("images/light.png");
+      background-repeat: no-repeat;
+      /* 좌측 상단 기준 우측 5px, 아래쪽 7px로 이동하여 표시 */
+      background-position: right center;
+    }
+    #bg2 {
+      background-image: url("images/light.png");
+      background-repeat: no-repeat;
+      /* 가로 측으로 우측 정렬, 세로 축으로 가운데 정렬 */
+      background-position: right center;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <button id="bg1">
+      IDEA
+    </button>
+  </div>
+  <div>
+    <button id="bg2">
+      IDEA
+    </button>
+  </div>
+</body>
+</html>

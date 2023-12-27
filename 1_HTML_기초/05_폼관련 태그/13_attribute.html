@@ -1,0 +1,81 @@
+<!doctype html>
+
+<html lang="ko">
+<head>
+    <title> 웹 폼</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            background-color:#fff;
+        }
+        form fieldset{
+            margin-bottom:25px;
+        }
+        form legend{
+            font-size:15px;
+            font-weight:600;
+        }
+        form label.reg {
+            font-size:14px;
+            width:110px;
+            color:#390;
+            font-weight:bold;
+            float:left;
+            text-align:right;
+            margin-right:10px;
+        }
+        form ul li{
+            list-style:none;
+            margin: 15px 0;
+            font-size:14px;
+        }
+        #member, #stuffs {
+            width:50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>여름방학 특강 신청</h1>
+    <form>
+        <fieldset id="subject">
+            <legend>수강과목</legend>
+            <ul>
+                <li>
+                    <label class="reg" for="subj">영어회화(초급)</label>
+<!-- readonly로 사용자가 값을 입력할 수 없고 value에 지정된 값을 서버로 전송 -->
+                    <input type="text" id="subj" value="오전 9:00~11:00" readonly>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset id="register">
+            <legend>신청자</legend>
+            <ul>
+                <li>
+                    <label class="reg" for="uname">이름</label>
+<!-- autofocus: 페이지가 로드되면 포커스를 해당 요소로 이동한다. 크롬 브라우저에서 확인필요
+    required: 필수 입렭항목
+-->
+                    <input type="text" id="uname" autofocus required>
+                </li>
+                <li>
+                    <label class="reg" for="uid">학번</label>
+                    <!-- placeholder: 예시 텍스트 -->
+                    <input type="text" id="uid" placeholder="하이픈없이 입력" maxlength="8" required>
+                </li>
+                <li>
+                    <label class="reg" for="uclass">학과</label>
+                    <!-- select 박스 -->
+                    <select id="uclass">
+                        <option value="archi">건축공학과</option>
+                        <option value="mechanic">기계공학과</option>
+                        <option value="indust">산업공학과</option>
+                        <option value="elec">전기전자공학과</option>
+                        <option value="coputer">컴퓨터공학과</option>
+                        <option value="chemical">화학공학과</option>
+                    </select>
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+</body>
+</html>
