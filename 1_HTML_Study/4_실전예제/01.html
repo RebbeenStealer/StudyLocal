@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        #container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        header {
+            width: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+            color: white;
+        }
+        header .navbar {
+            height: 50px;
+            background-color: black;
+            opacity: 0.8;
+            line-height: 1em;
+        }
+        .container-fluid h1 {
+            float: left;
+            font-size: 2em;
+            line-height: initial;
+            margin: 0;
+            padding: 0 20px;
+        }
+        .navbar-collapse ul {
+            float: left;
+        }
+        .navbar-collapse li {
+           display: inline-block;
+            border-left: 1px solid white;
+            padding-left: 10px;
+        }
+        .navbar-collapse li a {
+            color: white;
+            padding: 20px;
+            text-decoration: none;
+        }
+        .nav-form {
+            float: right;
+            display: inline-block;
+            padding-right: 20px;
+            line-height: 2.5em;
+        }
+        #container {
+            /*position: absolute;*/
+            top: 50px;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+        .container marketing {
+            margin: 0 auto;
+        }
+        section {
+            margin: 0 auto;
+        }
+        section #myCarousel {
+            margin: 0 auto;
+        }
+        #myCarousel .inner-list {
+        }
+        .inner-list .inner {
+        }
+        .inner .inner-info {
+            display: inline-block;
+            border: 2px solid #222222;
+            text-align: right;
+        }
+   </style>
+</head>
+<body>
+    <div id="container">
+        <header data-bs-theme="dark">
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <div class="container-fluid">
+                    <h1 class="navbar-brand" href="#">Shopping Mall</h1>
+                    <span class="navbar-toggler-icon"></span>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Made</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Winter</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Best 100</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">New</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Outer</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Top</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Bottom</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Bag</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Shoes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">ACC</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nav-form">
+                        <form>
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section>
+            <article id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+                <div class="inner-list">
+                    <div class="inner">
+                        <div class="inner-info">
+                            <h2>What is Lorem Ipsum?</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                                and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                        </div>
+                        <div class="inner">
+                            <div class="inner-info">
+                                <h2>What is Lorem Ipsum?</h2>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                                    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            </div>
+                        </div>
+                        <div class="inner">
+                            <div class="inner-info">
+                                <h2>What is Lorem Ipsum?</h2>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                                    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </article> <!-- 슬라이드바 -->
+            <article class="container marketing">
+                <!-- Three columns of text below the carousel -->
+                <div class="row">
+                    <div class="col-lg-4">
+                        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+                        <h2 class="fw-normal">Heading</h2>
+                        <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+                        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-lg-4">
+                        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+                        <h2 class="fw-normal">Heading</h2>
+                        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+                        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-lg-4">
+                        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+                        <h2 class="fw-normal">Heading</h2>
+                        <p>And lastly this, the third column of representative placeholder content.</p>
+                        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+                    </div><!-- /.col-lg-4 -->
+                </div><!-- /.row -->
+            </article>
+        </section>
+    </div>
+</body>
+</html>

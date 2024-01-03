@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="shopping-mall.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        background-color: #f9f9f9;
+      }
+      #container {}
+      header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 50px;
+        background: rgb(22,22,22,0.9);
+        text-align: center;
+        align-items: center;
+        z-index: 999;
+      }
+      header h1 {
+        color: white;
+        margin: 0;
+        float: left;
+        font-size: 1.7em;
+        line-height: 45px;
+        padding-left: 20px;
+      }
+      header .top-nav { float: left; }
+      .top-nav .top-nav-ul { list-style: none; }
+      .top-nav-ul li {
+        display: inline-block;
+        font-size: 0.8em;
+        padding-right: 10px;
+      }
+      .top-nav-ul li a {
+        text-decoration: none;
+        color: white;
+      }
+      header .top-form {
+        float: right;
+        line-height: 45px;
+        padding-right: 20px;
+      }
+      .top-form form {}
+      .top-form input {}
+    /* header nav */
+    /* slide show */
+      section {
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        height: 100%;
+      }
+      section .main-slide {
+        position: relative;
+        overflow: hidden;
+        height: 700px;
+      }
+      .main-slide .inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+
+        animation: main-slide 7.5s infinite linear;
+      }
+      .inner:nth-child(1) {
+        background: #4b5d53;
+        animation-delay: 0;
+      }
+      .inner:nth-child(2) {
+        background: #e3e2e2;
+        animation-delay: -2.5s;
+      }
+      .inner:nth-child(3) {
+        background: #937f61;
+        animation-delay: -5s;
+      }
+
+      @keyframes main-slide {
+        0% {
+          transform: translateX(0);
+        }
+        26% {
+          transform: translateX(0);
+        }
+        33% {
+          transform: translateX(-100%);
+          animation-timing-function: step-end;
+        }
+        93% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+      /* 키 애니메이션 */
+
+      section .main-visual {
+        text-align: center;
+        padding: 100px;
+      }
+      .main-visual .main-box {
+        display: inline-block;
+        padding: 0 50px;
+      }
+      .main-img {
+        width: 200px;
+        height: 200px;
+        background: #4b5d53;
+        border-radius: 50%;
+      }
+      section .new-product {
+        text-align: center;
+        background: #e3e2e2;
+        padding: 50px 0;
+      }
+      .product-cont {
+        margin: 0 auto;
+        width: 70%;
+        padding-top: 40px;
+      }
+      .product-grid {
+        list-style: none;
+        margin: 0 auto;
+        padding: 0;
+      }
+      .product-grid li {
+        display: inline-block;
+      }
+      .product-grid .box {
+        padding: 10px 15px;
+      }
+      .product-grid .box .sumnail {
+        width: 250px;
+        height: 320px;
+        background: #444;
+      }
+    </style>
+</head>
+<body>
+  <div id="container">
+    <header>
+      <h1 class="shp-name">SHOPPINGMALL</h1>
+      <nav class="top-nav">
+        <ul class="top-nav-ul">
+          <li><a href="#">MADE</a></li>
+          <li><a href="#">WINTER</a></li>
+          <li><a href="#">BEST50</a></li>
+          <li><a href="#">NEW</a></li>
+          <li><a href="#">OUIER</a></li>
+          <li><a href="#">TOP</a></li>
+          <li><a href="#">BOTTOM</a></li>
+          <li><a href="#">BAG</a></li>
+          <li><a href="#">SHOES</a></li>
+          <li><a href="#">ACC</a></li>
+        </ulc>
+      </nav>
+      <div class="top-form">
+        <form>
+          <input class="form-control" type="search" aria-label="Search">
+          <button class="search-btn" type="submit">Search</button>
+        </form>
+      </div>
+    </header>
+    <section>
+      <article class="main-slide">
+        <div class="inner">
+        </div>
+        <div class="inner">
+        </div>
+        <div class="inner">
+        </div>
+      </article>
+      <article class="main-visual">
+        <div class="main-box">
+          <div class="main-img">
+          </div>
+          <div class="main-info">
+            <h4>MADE</h4>
+            <p>Shopping Mall made</p>
+          </div>
+        </div>
+        <div class="main-box">
+          <div class="main-img">
+          </div>
+          <div class="main-info">
+            <h4>MADE</h4>
+            <p>Shopping Mall made</p>
+          </div>
+        </div>
+        <div class="main-box">
+          <div class="main-img">
+          </div>
+          <div class="main-info">
+            <h4>MADE</h4>
+            <p>Shopping Mall made</p>
+          </div>
+        </div>
+      </article>
+      <article class="new-product">
+        <h4 class="new-title">NEW UPDATE</h4>
+        <p class="new-sub">매주 화,금 업데이트</p>
+        <div class="product-cont">
+          <ul class="product-grid">
+            <li>
+              <div class="box">
+                <div class="sumnail"></div>
+                <div class="description">
+                  <h5>PRODUCT NAME</h5>
+                  <p>30,000 <span>원</span></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div class="sumnail"></div>
+                <div class="description">
+                  <h5>PRODUCT NAME</h5>
+                  <p>30,000 <span>원</span></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div class="sumnail"></div>
+                <div class="description">
+                  <h5>PRODUCT NAME</h5>
+                  <p>30,000 <span>원</span></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div class="sumnail"></div>
+                <div class="description">
+                  <h5>PRODUCT NAME</h5>
+                  <p>30,000 <span>원</span></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div class="sumnail"></div>
+                <div class="description">
+                  <h5>PRODUCT NAME</h5>
+                  <p>30,000 <span>원</span></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div class="sumnail"></div>
+                <div class="description">
+                  <h5>PRODUCT NAME</h5>
+                  <p>30,000 <span>원</span></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div class="sumnail"></div>
+                <div class="description">
+                  <h5>PRODUCT NAME</h5>
+                  <p>30,000 <span>원</span></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div class="sumnail"></div>
+                <div class="description">
+                  <h5>PRODUCT NAME</h5>
+                  <p>30,000 <span>원</span></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div class="sumnail"></div>
+                <div class="description">
+                  <h5>PRODUCT NAME</h5>
+                  <p>30,000 <span>원</span></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div class="sumnail"></div>
+                <div class="description">
+                  <h5>PRODUCT NAME</h5>
+                  <p>30,000 <span>원</span></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div class="sumnail"></div>
+                <div class="description">
+                  <h5>PRODUCT NAME</h5>
+                  <p>30,000 <span>원</span></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div class="sumnail"></div>
+                <div class="description">
+                  <h5>PRODUCT NAME</h5>
+                  <p>30,000 <span>원</span></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div class="sumnail"></div>
+                <div class="description">
+                  <h5>PRODUCT NAME</h5>
+                  <p>30,000 <span>원</span></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div class="sumnail"></div>
+                <div class="description">
+                  <h5>PRODUCT NAME</h5>
+                  <p>30,000 <span>원</span></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div class="sumnail"></div>
+                <div class="description">
+                  <h5>PRODUCT NAME</h5>
+                  <p>30,000 <span>원</span></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div class="sumnail"></div>
+                <div class="description">
+                  <h5>PRODUCT NAME</h5>
+                  <p>30,000 <span>원</span></p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </article>
+      <article class="best-product">
+        <h4 class="new-title">BEST PRODUCT</h4>
+        <div class="product-cont">
+          <ul class="product-grid">
+            <li>
+              <div class="box">
+                <div class="sumnail"></div>
+                <div class="description">
+                  <h5>PRODUCT NAME</h5>
+                  <p>30,000 <span>원</span></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div class="sumnail"></div>
+                <div class="description">
+                  <h5>PRODUCT NAME</h5>
+                  <p>30,000 <span>원</span></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div class="sumnail"></div>
+                <div class="description">
+                  <h5>PRODUCT NAME</h5>
+                  <p>30,000 <span>원</span></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div class="sumnail"></div>
+                <div class="description">
+                  <h5>PRODUCT NAME</h5>
+                  <p>30,000 <span>원</span></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div class="sumnail"></div>
+                <div class="description">
+                  <h5>PRODUCT NAME</h5>
+                  <p>30,000 <span>원</span></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div class="sumnail"></div>
+                <div class="description">
+                  <h5>PRODUCT NAME</h5>
+                  <p>30,000 <span>원</span></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div class="sumnail"></div>
+                <div class="description">
+                  <h5>PRODUCT NAME</h5>
+                  <p>30,000 <span>원</span></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div class="sumnail"></div>
+                <div class="description">
+                  <h5>PRODUCT NAME</h5>
+                  <p>30,000 <span>원</span></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div class="sumnail"></div>
+                <div class="description">
+                  <h5>PRODUCT NAME</h5>
+                  <p>30,000 <span>원</span></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div class="sumnail"></div>
+                <div class="description">
+                  <h5>PRODUCT NAME</h5>
+                  <p>30,000 <span>원</span></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div class="sumnail"></div>
+                <div class="description">
+                  <h5>PRODUCT NAME</h5>
+                  <p>30,000 <span>원</span></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div class="sumnail"></div>
+                <div class="description">
+                  <h5>PRODUCT NAME</h5>
+                  <p>30,000 <span>원</span></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div class="sumnail"></div>
+                <div class="description">
+                  <h5>PRODUCT NAME</h5>
+                  <p>30,000 <span>원</span></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div class="sumnail"></div>
+                <div class="description">
+                  <h5>PRODUCT NAME</h5>
+                  <p>30,000 <span>원</span></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div class="sumnail"></div>
+                <div class="description">
+                  <h5>PRODUCT NAME</h5>
+                  <p>30,000 <span>원</span></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div class="sumnail"></div>
+                <div class="description">
+                  <h5>PRODUCT NAME</h5>
+                  <p>30,000 <span>원</span></p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </article>
+    </section>
+  </div>
+  <footer>
+    <ul class="foot-ul">
+      <li>
+        <h6>COMPAY SHOPPINGMALL</h6>
+      </li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </footer>
+
+</body>
+</html>
