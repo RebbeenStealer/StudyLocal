@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quiz01</title>
+    <script>
+        const STUDENT_NUM = 5;
+
+        let scores = [];
+        for (let i = 0; i < STUDENT_NUM; i++) {
+            let userInput = prompt('학셍' + (i + 1) + "의 성적을 입력하세요.");
+            let score = parseFloat(userInput);
+            scores.push(score);
+        }
+
+        let total = 0;
+        for (let i = 0; i < scores.length; i++) {
+            total += scores[i];
+        }
+        let average = total / STUDENT_NUM;
+        alert('총점: ' + total + '\n평균: ' + average);
+        /*
+        let inputScore1 = parseInt(prompt("학생 1의 성적을 입력하세요."));
+        let inputScore2 = parseInt(prompt("학생 2의 성적을 입력하세요."));
+        let inputScore3 = parseInt(prompt("학생 3의 성적을 입력하세요."));
+        let inputScore4 = parseInt(prompt("학생 4의 성적을 입력하세요."));
+        let inputScore5 = parseInt(prompt("학생 5의 성적을 입력하세요."));
+
+        let totalScore = inputScore1 + inputScore2 + inputScore3 + inputScore4 + inputScore5;
+        let totalLength = [inputScore1, inputScore2, inputScore3, inputScore4, inputScore5];
+        let totalAverage = totalScore / totalLength.length;
+
+        alert("총점: " + totalScore + "\n" + "평균: " + totalAverage);
+        */
+    </script>
+</head>
+<body>
+
+</body>
+</html>

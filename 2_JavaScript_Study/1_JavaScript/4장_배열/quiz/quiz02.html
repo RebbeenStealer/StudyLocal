@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        let scores = [];
+        let studentLength = 1;
+
+        // 학생 성적 입력 받기
+        while (true) {
+            let inpputScore = prompt("학생" + (studentLength++) + "의 성적을 입력 하세요 (중지는 q):");
+            if (userNUmber === 'q') {
+                break;
+            }
+            let score = parseInt(inpputScore);
+            scores.push(score);
+        }
+
+        // 충점 계산
+        let total = 0;
+        for (let i = 0; i < scores.length; i++) {
+            total += scores[i];
+        }
+        let average = total / scores.length;
+        alert("총점: " + total + '\n평균' + average);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

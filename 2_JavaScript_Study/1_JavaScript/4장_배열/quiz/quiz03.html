@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        let scores = [];
+        let studentNum = 1;
+
+        while (true) {
+            let userInput = prompt('학생 ' + (studentNum++) + '의 성적을 입력 하세요(중지는 q):');
+            if (userInput === 'q') {
+                break;
+            }
+            let score = parseFloat(userInput);
+            if (score >= 0 && score <= 100) {
+                scores.push(score);
+            }else {
+                alert("올바른 성적을 입력 하세요.(0에서 100이하의 값을 입력하세요");
+                studentNum--;
+            }
+        }
+
+        let total = 0;
+        for (let i = 0; i < scores.length; i++) {
+            total += scores[i];
+        }
+        let average = total / scores.length;
+        alert('총점: ' + total + '\n평균: ' + average);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

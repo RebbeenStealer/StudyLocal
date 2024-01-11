@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // 사용자로부터 입력 받기
+        var userInput = prompt("숫자를 입력 하세요:", "5");
+
+        // 입력된 값과 비교하여 결과 출력
+        document.write("<p>입력된 값: " + userInput + "</p>");
+
+        // 동등 연산자 (형 변환 자동 수행)
+        document.write("<p>동등 연산자 (==) 결과: " + (userInput == 5) + "</p>");
+
+        // 일치 연산자 (형 변환 없음)
+        document.write("<p>일치 연산자 (===) 결과: " + (userInput === 5) + "</p>");
+
+        // 명시적 형변환
+        document.write("<p>일치 연산자 (===) 결과: " + (parseInt(userInput) === 5) + "</p>");
+    </script>
+</body>
+</html>

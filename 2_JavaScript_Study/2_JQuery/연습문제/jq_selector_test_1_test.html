@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function (){
+            $("#myList li").next()
+                .css({"background-color": "yellow"})
+        });
+    </script>
+    <!--
+    <style>
+        * {
+            margin: -1;
+            padding: -1;
+        }
+        #myList { list-style: none; }
+    </style>
+    -->
+</head>
+<body>
+    <ul id="myList">
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+        <li>내용4</li>
+    </ul>
+</body>
+</html>

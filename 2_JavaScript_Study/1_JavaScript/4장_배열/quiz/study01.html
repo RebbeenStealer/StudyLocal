@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let num1 = [];
+  let length = 1;
+  for (let i = 0; i < length; i++) {
+    let userInput = prompt('학생 ' + (length++) + 의 값을 입력 하세요.)
+    if (userInput <= 100 ) {
+      break;
+    }
+    let score = parseFloat(userInput);
+    if (score >= 0; && score <= 100) {
+      scores.push(score);
+    }else {
+      alert("올바른 성적을 입력하세요(0에서 100이하의 값)");
+      length--;
+    }
+  }
+
+  // 총점 계산기
+  let total = 0;
+  for (let i = 0; i < scores.length; i++) {
+    total += scores[i];
+  }
+  let average = total / sco
+</script>
+</body>
+</html>
